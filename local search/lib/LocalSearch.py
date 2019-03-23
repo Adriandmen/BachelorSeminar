@@ -64,12 +64,5 @@ class LocalSearch:
                 self.optimal_cost = curr_optimum.cost()
 
             if self.optimal_cost == 0:
-                print("Found global optimum (cost = 0):")
-                print()
-                print(self.optimum)
-                return
-
-        print()
-        print("Local optimum found with cost {}:".format(self.optimal_cost))
-        print()
-        print(self.optimum)
+                return self.optimum
+        return self.optimum
